@@ -4,3 +4,8 @@ version = "0.1.0"
 authors = ["zhengshaodong <ngxcorpio@gmail.com>"]
 
 [dependencies]
+tokio = "0.1.5"
+
+[[bin]]
+name = "hello-tokio"
+path = "src/bin/hello-tokio.rs"
