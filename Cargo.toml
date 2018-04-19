@@ -7,5 +7,9 @@ authors = ["zhengshaodong <ngxcorpio@gmail.com>"]
 tokio = "0.1.5"
 
 [[bin]]
+name = "hello-world"
+path = "src/bin/hello-world.rs"
+
+[[bin]]
 name = "hello-tokio"
 path = "src/bin/hello-tokio.rs"
