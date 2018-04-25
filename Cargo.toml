@@ -8,12 +8,12 @@ tokio = "0.1.5"
 tokio-io = "0.1.6"
 
 [[bin]]
-name = "hello-world"
-path = "src/bin/hello-world.rs"
+name = "tokio-hello-world"
+path = "src/bin/tokio-hello-world.rs"
 
 [[bin]]
-name = "hello-tokio"
-path = "src/bin/hello-tokio.rs"
+name = "tokio-hello-tokio"
+path = "src/bin/tokio-hello-tokio.rs"
 
 [[bin]]
 name = "tokio-print-each-packet"
