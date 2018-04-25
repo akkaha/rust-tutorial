@@ -18,3 +18,7 @@ path = "src/bin/tokio-hello-tokio.rs"
 [[bin]]
 name = "tokio-print-each-packet"
 path = "src/bin/tokio-print-each-packet.rs"
+
+[[bin]]
+name = "tokio-echo"
+path = "src/bin/tokio-echo.rs"
