@@ -6,6 +6,7 @@ authors = ["zhengshaodong <ngxcorpio@gmail.com>"]
 [dependencies]
 tokio = "0.1.5"
 tokio-io = "0.1.6"
+futures = "0.2.1"
 
 [[bin]]
 name = "tokio-hello-world"
@@ -22,3 +23,7 @@ path = "src/bin/tokio-print-each-packet.rs"
 [[bin]]
 name = "tokio-echo"
 path = "src/bin/tokio-echo.rs"
+
+[[bin]]
+name = "tokio-echo-udp"
+path = "src/bin/tokio-echo-udp.rs"
