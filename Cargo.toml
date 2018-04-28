@@ -32,3 +32,11 @@ path = "src/bin/tokio-echo-udp.rs"
 [[bin]]
 name = "tokio-connect"
 path = "src/bin/tokio-connect.rs"
+
+[[bin]]
+name = "tokio-chat"
+path = "src/bin/tokio-chat.rs"
+
+[[bin]]
+name = "bytes-hello"
+path = "src/bin/bytes-hello.rs"
