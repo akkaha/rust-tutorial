@@ -2,6 +2,8 @@
 name = "rust-tutorial"
 version = "0.1.0"
 authors = ["zhengshaodong <ngxcorpio@gmail.com>"]
+description = "learn rust."
+license = "MIT"
 
 [dependencies]
 tokio = "0.1.5"
