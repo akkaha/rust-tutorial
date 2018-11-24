@@ -7,6 +7,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "basic"
+version = "0.1.0"
+
+[[package]]
 name = "bitflags"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -196,7 +200,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "rust-tutorial"
+name = "rust-tutorial-tokio"
 version = "0.1.0"
 dependencies = [
  "bytes 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
