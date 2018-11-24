@@ -1,1 +1,1 @@
-# Hello Rust
+# Rust Tutorial
