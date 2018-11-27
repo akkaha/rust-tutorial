@@ -4,3 +4,11 @@ version = "0.1.0"
 authors = ["zhengshaodong <ngxcorpio@gmail.com>"]
 
 [dependencies]
+
+[[bin]]
+name = "function_test"
+path = "src/function_test.rs"
+
+[[bin]]
+name = "control_flow_test"
+path = "src/control_flow_test.rs"
