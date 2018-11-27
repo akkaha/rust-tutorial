@@ -1,5 +1,5 @@
 [package]
-name = "rust-tutorial-tokio"
+name = "tokio-tutorial"
 version = "0.1.0"
 authors = ["zhengshaodong <ngxcorpio@gmail.com>"]
 

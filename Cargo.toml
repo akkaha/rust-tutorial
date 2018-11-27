@@ -1,6 +1,7 @@
 [workspace]
 
 members = [
-    "basic",
-    "tokio",
+    "basic-tutorial",
+    "tokio-tutorial",
+    "clap-tutorial",
 ]
