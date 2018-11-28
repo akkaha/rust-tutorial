@@ -20,3 +20,7 @@ path = "src/ownership_test.rs"
 [[bin]]
 name = "references_and_borrowing_test"
 path = "src/references_and_borrowing_test.rs"
+
+[[bin]]
+name = "slice_test"
+path = "src/slice_test.rs"
