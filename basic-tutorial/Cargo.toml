@@ -12,3 +12,7 @@ path = "src/function_test.rs"
 [[bin]]
 name = "control_flow_test"
 path = "src/control_flow_test.rs"
+
+[[bin]]
+name = "ownership_test"
+path = "src/ownership_test.rs"
