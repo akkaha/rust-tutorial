@@ -16,3 +16,7 @@ path = "src/control_flow_test.rs"
 [[bin]]
 name = "ownership_test"
 path = "src/ownership_test.rs"
+
+[[bin]]
+name = "references_and_borrowing_test"
+path = "src/references_and_borrowing_test.rs"
