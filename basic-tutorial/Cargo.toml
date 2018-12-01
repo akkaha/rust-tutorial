@@ -28,3 +28,7 @@ path = "src/slice_test.rs"
 [[bin]]
 name = "struct_test"
 path = "src/struct_test.rs"
+
+[[bin]]
+name = "method_test"
+path = "src/method_test.rs"
