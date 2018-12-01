@@ -24,3 +24,7 @@ path = "src/references_and_borrowing_test.rs"
 [[bin]]
 name = "slice_test"
 path = "src/slice_test.rs"
+
+[[bin]]
+name = "struct_test"
+path = "src/struct_test.rs"
