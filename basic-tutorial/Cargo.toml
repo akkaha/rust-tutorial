@@ -40,3 +40,7 @@ path = "src/enum_test.rs"
 [[bin]]
 name = "match_test"
 path = "src/match_test.rs"
+
+[[bin]]
+name = "vectors_test"
+path = "src/vectors_test.rs"
