@@ -36,3 +36,7 @@ path = "src/method_test.rs"
 [[bin]]
 name = "enum_test"
 path = "src/enum_test.rs"
+
+[[bin]]
+name = "match_test"
+path = "src/match_test.rs"
