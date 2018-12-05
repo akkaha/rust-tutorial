@@ -48,3 +48,7 @@ path = "src/vectors_test.rs"
 [[bin]]
 name = "strings_test"
 path = "src/strings_test.rs"
+
+[[bin]]
+name = "map_test"
+path = "src/map_test.rs"
