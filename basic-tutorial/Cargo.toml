@@ -60,3 +60,7 @@ path = "src/panic_test.rs"
 [[bin]]
 name = "traits_test"
 path = "src/traits_test.rs"
+
+[[bin]]
+name = "lifetimes_test"
+path = "src/lifetimes_test.rs"
