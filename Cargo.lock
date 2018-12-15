@@ -177,6 +177,10 @@ version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "minigrep"
+version = "0.1.0"
+
+[[package]]
 name = "mio"
 version = "0.6.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"

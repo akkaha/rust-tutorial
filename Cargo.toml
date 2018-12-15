@@ -4,4 +4,5 @@ members = [
     "basic-tutorial",
     "tokio-tutorial",
     "clap-tutorial",
+    "minigrep",
 ]
