@@ -64,3 +64,7 @@ path = "src/traits_test.rs"
 [[bin]]
 name = "lifetimes_test"
 path = "src/lifetimes_test.rs"
+
+[[bin]]
+name = "closures_test"
+path = "src/closures_test.rs"
