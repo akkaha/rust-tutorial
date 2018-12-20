@@ -74,3 +74,7 @@ path = "src/closures_test.rs"
 [[bin]]
 name = "iterators_test"
 path = "src/iterators_test.rs"
+
+[[bin]]
+name = "box_test"
+path = "src/box_test.rs"
