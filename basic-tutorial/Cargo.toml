@@ -86,3 +86,7 @@ path = "src/drop_test.rs"
 [[bin]]
 name = "rc_test"
 path = "src/rc_test.rs"
+
+[[bin]]
+name = "thread_test"
+path = "src/thread_test.rs"
