@@ -24,7 +24,7 @@ fn handle_connection(mut stream: TcpStream) {
     stream.read(&mut buffer).unwrap();
     println!("Request: {}", String::from_utf8_lossy(&buffer[..]));
     // let contents = fs::read_to_string("README.md").unwrap();
-    let contents = String::from("<p>hello</p>");
+    let contents = String::from("<p style=\"color:red;\">hello</p>");
     let response = format!("HTTP/1.1 200 OK\r\n\r\n{}", contents);
     stream.write(response.as_bytes()).unwrap();
     stream.flush().unwrap();
