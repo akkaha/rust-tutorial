@@ -5,4 +5,5 @@ members = [
     "tokio-tutorial",
     "clap-tutorial",
     "minigrep",
+    "webserver",
 ]
