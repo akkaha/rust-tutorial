@@ -94,3 +94,7 @@ path = "src/thread_test.rs"
 [[bin]]
 name = "message_passing_test"
 path = "src/message_passing_test.rs"
+
+[[bin]]
+name = "shared_state_test"
+path = "src/shared_state_test.rs"
