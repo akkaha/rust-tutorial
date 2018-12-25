@@ -98,3 +98,7 @@ path = "src/message_passing_test.rs"
 [[bin]]
 name = "shared_state_test"
 path = "src/shared_state_test.rs"
+
+[[bin]]
+name = "unsafe_test"
+path = "src/unsafe_test.rs"
