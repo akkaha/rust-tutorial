@@ -40,3 +40,7 @@ path = "src/bin/tokio-chat.rs"
 [[bin]]
 name = "bytes-hello"
 path = "src/bin/bytes-hello.rs"
+
+[[bin]]
+name = "tokio-futures"
+path = "src/bin/tokio-futures.rs"
