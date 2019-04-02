@@ -76,7 +76,7 @@ impl Future for GetPeerAddr {
 ///////////////////////////
 // Chaining Computations //
 ///////////////////////////
-enum HelloWorld2 {
+/*enum HelloWorld2 {
     Connecting(ConnectFuture),
     Connected(TcpStream, Cursor<Bytes>),
 }
@@ -103,7 +103,7 @@ impl Future for HelloWorld2 {
             }
         }
     }
-}
+}*/
 
 
 fn main() {
@@ -120,8 +120,8 @@ fn main() {
     tokio::run(get_peer_addr);
 
     // Combinators
-    let addr = "220.181.57.216:80".parse().unwrap();
+    /*let addr = "220.181.57.216:80".parse().unwrap();
     let connect_future = TcpStream::connect(&addr);
     let hello_world2 = HelloWorld2::Connecting(connect_future);
-    tokio::run(hello_world2.map_err(|e| println!("{0}", e)))
+    tokio::run(hello_world2.map_err(|e| println!("{0}", e)))*/
 }
