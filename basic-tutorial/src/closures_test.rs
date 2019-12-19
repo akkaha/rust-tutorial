@@ -8,12 +8,18 @@ fn main() {
     generate_workout(simulated_user_specified_value, simulated_random_number);
 }
 
-struct Cacher<T> where T: Fn(u32) -> u32 {
+struct Cacher<T>
+where
+    T: Fn(u32) -> u32,
+{
     calculation: T,
     value: Option<u32>,
 }
 
-impl<T> Cacher<T> where T: Fn(u32) -> u32 {
+impl<T> Cacher<T>
+where
+    T: Fn(u32) -> u32,
+{
     fn new(calculation: T) -> Cacher<T> {
         Cacher {
             calculation,
@@ -40,14 +46,8 @@ fn generate_workout(intensity: u32, random_number: u32) {
         num
     });
     if intensity < 25 {
-        println!(
-            "Today, do {} push ups!",
-            expensive_result.value(intensity)
-        );
-        println!(
-            "Next, do {} sit ups!",
-            expensive_result.value(intensity)
-        );
+        println!("Today, do {} push ups!", expensive_result.value(intensity));
+        println!("Next, do {} sit ups!", expensive_result.value(intensity));
     } else {
         if random_number == 3 {
             println!("Take a break today! Remember to stay hydrated!");

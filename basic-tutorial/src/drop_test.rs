@@ -1,8 +1,12 @@
 #[allow(unused)]
 fn main() {
-    let c = CustomSmartPointer { data: String::from("my stuff") };
+    let c = CustomSmartPointer {
+        data: String::from("my stuff"),
+    };
     drop(c);
-    let d = CustomSmartPointer { data: String::from("other stuff") };
+    let d = CustomSmartPointer {
+        data: String::from("other stuff"),
+    };
     println!("CustomSmartPointers created.")
 }
 

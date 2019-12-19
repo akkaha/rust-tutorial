@@ -6,11 +6,7 @@ fn main() {
         println!("condition is false")
     }
 
-    let number = if true {
-        5
-    } else {
-        6
-    };
+    let number = if true { 5 } else { 6 };
     println!("value from if expression {}", number);
 
     // lets loop

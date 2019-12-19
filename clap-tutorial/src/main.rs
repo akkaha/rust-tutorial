@@ -8,26 +8,36 @@ fn main() {
         .version("1.0.0")
         .about("hello clap demo")
         .author("zhengshaodong <ngxcorpio@gmail.com>")
-        .arg(Arg::with_name("config")
-            .short("c")
-            .long("config")
-            .value_name("FILE")
-            .help("Sets a custom file")
-            .takes_value(true))
-        .arg(Arg::with_name("INPUT")
-            .help("Sets the input file to use")
-            .required(true)
-            .index(1))
-        .arg(Arg::with_name("v")
-            .short("v")
-            .multiple(true)
-            .help("Sets the level of verbosity"))
-        .subcommand(SubCommand::with_name("test")
-            .about("controls testing features")
-            .version("1.3")
-            .arg(Arg::with_name("debug")
-                .short("d")
-                .help("print debug information verbosely")))
+        .arg(
+            Arg::with_name("config")
+                .short("c")
+                .long("config")
+                .value_name("FILE")
+                .help("Sets a custom file")
+                .takes_value(true),
+        )
+        .arg(
+            Arg::with_name("INPUT")
+                .help("Sets the input file to use")
+                .required(true)
+                .index(1),
+        )
+        .arg(
+            Arg::with_name("v")
+                .short("v")
+                .multiple(true)
+                .help("Sets the level of verbosity"),
+        )
+        .subcommand(
+            SubCommand::with_name("test")
+                .about("controls testing features")
+                .version("1.3")
+                .arg(
+                    Arg::with_name("debug")
+                        .short("d")
+                        .help("print debug information verbosely"),
+                ),
+        )
         .get_matches();
 
     let config = matches.value_of("config").unwrap_or("default.conf");
@@ -40,7 +50,7 @@ fn main() {
         0 => println!("No verbose info"),
         1 => println!("Some verbose info"),
         2 => println!("Tons of verbose info"),
-        3 | _ => println!("Don't be crazy")
+        3 | _ => println!("Don't be crazy"),
     }
 
     // You can handle information about sub commands by requesting their matches by name

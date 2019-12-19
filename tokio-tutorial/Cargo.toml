@@ -2,45 +2,13 @@
 name = "tokio-tutorial"
 version = "0.1.0"
 authors = ["zhengshaodong <ngxcorpio@gmail.com>"]
+publish = false
+edition = "2018"
 
 [dependencies]
-tokio = "0.1.5"
-tokio-io = "0.1.6"
-futures = "0.1.20"
-bytes = "0.4.6"
+tokio = { version = "0.2", features = ["full"] }
+futures = "0.3"
 
-[[bin]]
-name = "tokio-hello-world"
-path = "src/bin/tokio-hello-world.rs"
-
-[[bin]]
-name = "tokio-hello-tokio"
-path = "src/bin/tokio-hello-tokio.rs"
-
-[[bin]]
-name = "tokio-print-each-packet"
-path = "src/bin/tokio-print-each-packet.rs"
-
-[[bin]]
+[[example]]
 name = "tokio-echo"
 path = "src/bin/tokio-echo.rs"
-
-[[bin]]
-name = "tokio-echo-udp"
-path = "src/bin/tokio-echo-udp.rs"
-
-[[bin]]
-name = "tokio-connect"
-path = "src/bin/tokio-connect.rs"
-
-[[bin]]
-name = "tokio-chat"
-path = "src/bin/tokio-chat.rs"
-
-[[bin]]
-name = "bytes-hello"
-path = "src/bin/bytes-hello.rs"
-
-[[bin]]
-name = "tokio-futures"
-path = "src/bin/tokio-futures.rs"

@@ -25,17 +25,32 @@ impl Rectangle {
     // 结构体相关联. 它们仍是函数而不是方法, 因为它们不作用于一个结构体的实例. 如: `String::from`
     // 关联函数经常被用作返回一个结构体的新实例的构造函数.
     fn square(size: u32) -> Rectangle {
-        Rectangle { width: size, height: size }
+        Rectangle {
+            width: size,
+            height: size,
+        }
     }
 }
 
 fn main() {
-    let rect1 = Rectangle { width: 30, height: 50 };
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
     // Rust 有一个叫`自动引用和解引用(automatic referencing and dereferencing)`的功能.
     // `rect1.area()` 和 `&rect1.area()` 是等价的.
-    println!("The area of the rectangle is {} square pixels.", rect1.area());
-    println!("The area of the rectangle is {} square pixels.", &rect1.area());
-    let rect2 = Rectangle { width: 22, height: 11 };
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        rect1.area()
+    );
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        &rect1.area()
+    );
+    let rect2 = Rectangle {
+        width: 22,
+        height: 11,
+    };
     println!("hold: {}", rect1.can_hold(&rect2));
     println!("square: {:?}", Rectangle::square(240));
 }

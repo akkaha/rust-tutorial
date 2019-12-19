@@ -16,8 +16,8 @@ fn main() {
 
     // 将值传递给函数在语义上与变量赋值相似。向函数传递值可能会移动或者复制，就像赋值语句一样。
     let s3 = String::from("hello"); // s3 进入作用域
-    takes_ownership(s3);  // s3 的值移动到函数里
-    // s3 在这里不再有效
+    takes_ownership(s3); // s3 的值移动到函数里
+                         // s3 在这里不再有效
 
     // Rust 有一个叫做 `Copy` trait 的特殊注解，可以用在类似整形这样的存储在栈上的类型上。
     // 如果一个类型拥有 `Copy` trait，一个旧的变量在将其赋值给其他变量后仍然可用。
@@ -30,9 +30,9 @@ fn main() {
     // - 所有浮点数类型，如：f64
     // - 字符类型，char
     // - 元祖，当且仅当其包含类型也是 `Copy` 的时候。比如, (i32, i32) 是 `Copy` 的, 但 (i32, String) 不是
-    let x = 5;  // x 进入作用域
-    makes_copy(x);  // x 应该移动函数里
-    println!("copied i32: {}", x);  // 但 i32 是 Copy 的，所以在后面继续使用x
+    let x = 5; // x 进入作用域
+    makes_copy(x); // x 应该移动函数里
+    println!("copied i32: {}", x); // 但 i32 是 Copy 的，所以在后面继续使用x
 
     // 返回值也可以转移所有权
     let s4 = gives_ownership();
@@ -40,21 +40,24 @@ fn main() {
     let s5 = String::from("hello");
     let s6 = takes_and_gives_back(s5); // s4 被移动到 takes_and_gives_back 中, 它也将返回值移给 s5
     println!("takes and gives back: {}", s6);
-}  // 这里, s6 移出作用域并被丢弃. s5 也移出作用域, 但已被移走, 所以什么也不会发生. s4 移出作用域并被丢弃.
+} // 这里, s6 移出作用域并被丢弃. s5 也移出作用域, 但已被移走, 所以什么也不会发生. s4 移出作用域并被丢弃.
 
-fn takes_ownership(some: String) {  // some 进入作用域
+fn takes_ownership(some: String) {
+    // some 进入作用域
     println!("in function takes_ownership: {}", some);
-}   // 这里, some 移出作用域并调用 `drop` 方法。占用的内存被释放。
+} // 这里, some 移出作用域并调用 `drop` 方法。占用的内存被释放。
 
-fn makes_copy(some_integer: i32) {  // some 进入作用域
+fn makes_copy(some_integer: i32) {
+    // some 进入作用域
     println!("{}", some_integer);
 } // 这里，some_integer 移出作用域。不会有特殊操作。
 
 fn gives_ownership() -> String {
-    let some_string = String::from("hello");  // some_string 进入作用域
-    some_string  // 返回 some_string 并移除给调用的函数
+    let some_string = String::from("hello"); // some_string 进入作用域
+    some_string // 返回 some_string 并移除给调用的函数
 }
 
-fn takes_and_gives_back(a_string: String) -> String {  // a_string 进入作用域
-    a_string  // 返回 a_string 并移出给调用函数
+fn takes_and_gives_back(a_string: String) -> String {
+    // a_string 进入作用域
+    a_string // 返回 a_string 并移出给调用函数
 }

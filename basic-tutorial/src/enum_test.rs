@@ -56,7 +56,11 @@ fn main() {
     };
     println!("{:?}", loopback);
 
-    println!("{:?}, {:?}", IpAddr2::V4(String::from("127.0.0.1")), IpAddr2::V6(String::from("::1")));
+    println!(
+        "{:?}, {:?}",
+        IpAddr2::V4(String::from("127.0.0.1")),
+        IpAddr2::V6(String::from("::1"))
+    );
 
     println!("{:?}", IpAddr3::V4(127, 0, 0, 1));
 

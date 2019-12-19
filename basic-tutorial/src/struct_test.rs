@@ -24,13 +24,19 @@ fn main() {
     user1.email = String::from("world@gmail.com");
 
     let user2 = build_user(String::from("ha@g.com"), String::from("ha"));
-    println!("user2.username: {}, user2.email: {}", user2.username, user2.email);
+    println!(
+        "user2.username: {}, user2.email: {}",
+        user2.username, user2.email
+    );
 
     let user3 = User {
         username: String::from("user3"),
         ..user2
     };
-    println!("user3.username: {}, user3.email: {}", user3.username, user3.email);
+    println!(
+        "user3.username: {}, user3.email: {}",
+        user3.username, user3.email
+    );
 
     let black = Color(0, 0, 0);
     let origin = Point(0, 0, 0);

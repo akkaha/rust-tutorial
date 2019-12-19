@@ -17,7 +17,11 @@ impl Config {
         let filename = args[2].clone();
 
         let case_sensitive = env::var("CASE_INSENSITIVE").is_err();
-        Ok(Config { query, filename, case_sensitive })
+        Ok(Config {
+            query,
+            filename,
+            case_sensitive,
+        })
     }
 }
 
@@ -69,10 +73,7 @@ Rust:
 safe, fast, productive.
 Pick three.
 Duct tape.";
-        assert_eq!(
-            vec!["safe, fast, productive."],
-            search(query, contents)
-        )
+        assert_eq!(vec!["safe, fast, productive."], search(query, contents))
     }
 
     #[test]

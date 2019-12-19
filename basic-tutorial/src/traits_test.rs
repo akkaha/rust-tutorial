@@ -39,7 +39,6 @@ impl Summary for Tweet {
     }
 }
 
-
 pub fn notify(item: impl Summary) {
     println!("Breaking news! {}", item.summarize());
 }
@@ -53,9 +52,11 @@ pub fn notify_two(item: impl Summary + Display) {}
 
 #[allow(unused)]
 pub fn notify_where<T, U>(t: T, u: U)
-    where T: Display + Clone,
-          U: Clone + Debug
-{}
+where
+    T: Display + Clone,
+    U: Clone + Debug,
+{
+}
 
 // 返回值中使用 `impl Trait` 语法
 fn returns_summarizable() -> impl Summary {
