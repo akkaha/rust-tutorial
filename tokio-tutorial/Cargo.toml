@@ -7,8 +7,24 @@ edition = "2018"
 
 [dependencies]
 tokio = { version = "0.2", features = ["full"] }
+tokio-util = { version = "0.2", features = ["full"] }
+bytes = "0.5"
 futures = "0.3"
+http = "0.2"
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+httparse = "1.0"
+time = "0.1"
+
+[[example]]
+name = "tokio-hello"
+path = "src/bin/tokio-hello.rs"
 
 [[example]]
 name = "tokio-echo"
 path = "src/bin/tokio-echo.rs"
+
+[[example]]
+name = "tokio-connect"
+path = "src/bin/tokio-connect.rs"
