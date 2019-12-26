@@ -2,6 +2,7 @@
 
 members = [
     "basic-tutorial",
+    "bytes-tutorial",
     "tokio-tutorial",
     "clap-tutorial",
     "minigrep",

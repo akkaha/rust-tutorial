@@ -31,8 +31,8 @@ mod tcp {
 
     pub async fn connect(
         addr: &SocketAddr,
-        mut stdin: impl Stream<Item=Result<Bytes, io::Error>> + Unpin,
-        mut stdout: impl Sink<Bytes, Error=io::Error> + Unpin,
+        mut stdin: impl Stream<Item = Result<Bytes, io::Error>> + Unpin,
+        mut stdout: impl Sink<Bytes, Error = io::Error> + Unpin,
     ) -> Result<(), Box<dyn Error>> {
         let mut stream = TcpStream::connect(addr).await?;
         let (r, w) = stream.split();
@@ -68,8 +68,8 @@ mod udp {
 
     pub async fn connect(
         addr: &SocketAddr,
-        stdin: impl Stream<Item=Result<Bytes, io::Error>> + Unpin,
-        stdout: impl Sink<Bytes, Error=io::Error> + Unpin,
+        stdin: impl Stream<Item = Result<Bytes, io::Error>> + Unpin,
+        stdout: impl Sink<Bytes, Error = io::Error> + Unpin,
     ) -> Result<(), Box<dyn Error>> {
         // We'll bind our UDP socket to a local IP/port,
         // but for now we basically let the OS pick both of those.
@@ -87,7 +87,7 @@ mod udp {
     }
 
     async fn send(
-        mut stdin: impl Stream<Item=Result<Bytes, io::Error>> + Unpin,
+        mut stdin: impl Stream<Item = Result<Bytes, io::Error>> + Unpin,
         writer: &mut SendHalf,
     ) -> Result<(), io::Error> {
         while let Some(item) = stdin.next().await {
@@ -98,7 +98,7 @@ mod udp {
     }
 
     async fn recv(
-        mut stdout: impl Sink<Bytes, Error=io::Error> + Unpin,
+        mut stdout: impl Sink<Bytes, Error = io::Error> + Unpin,
         reader: &mut RecvHalf,
     ) -> Result<(), io::Error> {
         loop {
